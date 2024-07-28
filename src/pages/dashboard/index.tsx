@@ -1,6 +1,8 @@
-import Head from "next/head";
 import styles from "./styles.module.css";
 import MetaHeader from "@/components/MetaHeader";
+import { getServerSideProps } from "./server";
+
+export { getServerSideProps };
 
 export default function Dashboard() {
   return (
