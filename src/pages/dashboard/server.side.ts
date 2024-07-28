@@ -1,3 +1,4 @@
+import User from "@/models/user";
 import { GetServerSideProps } from "next";
 import { getSession } from "next-auth/react";
 
@@ -13,7 +14,14 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
     };
   }
 
+  const user: User = {
+    email: session.user.email as string,
+    name: session.user.name as string,
+  };
+
   return {
-    props: {},
+    props: {
+      user: user,
+    },
   };
 };
