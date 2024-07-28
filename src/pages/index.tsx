@@ -5,21 +5,24 @@ import styles from "@/styles/Home.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-import heroImage from "@/assets/hero.png"
+import heroImage from "@/assets/hero.png";
+import MetaHeader from "@/components/MetaHeader";
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Tarefas</title>
-        <meta name="description" content="Organize suas tarefas de forma fácil" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <MetaHeader title="Tarefas" />
       <main className={styles.main}>
         <div className={styles.logoContent}>
-          <Image className={styles.hero} alt="Tarefas+" src={heroImage} priority />
-          <h1 className={styles.title}>Sistema feito para você organizar suas tarefas</h1>
+          <Image
+            className={styles.hero}
+            alt="Tarefas+"
+            src={heroImage}
+            priority
+          />
+          <h1 className={styles.title}>
+            Sistema feito para você organizar suas tarefas
+          </h1>
         </div>
         <div className={styles.infoContent}>
           <section className={styles.box}>
