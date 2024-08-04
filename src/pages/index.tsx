@@ -8,7 +8,12 @@ const inter = Inter({ subsets: ["latin"] });
 import heroImage from "@/assets/hero.png";
 import MetaHeader from "@/components/MetaHeader";
 
-export default function Home() {
+import { getStaticProps } from "./server";
+import HomeProps from "./properties";
+
+export { getStaticProps };
+
+export default function Home({ posts, comments }: HomeProps) {
   return (
     <div className={styles.container}>
       <MetaHeader title="Tarefas" />
@@ -26,10 +31,10 @@ export default function Home() {
         </div>
         <div className={styles.infoContent}>
           <section className={styles.box}>
-            <span>32 posts</span>
+            <span>{posts} posts</span>
           </section>
           <section className={styles.box}>
-            <span>96 comentários</span>
+            <span>{comments} comentários</span>
           </section>
         </div>
       </main>
