@@ -52,3 +52,38 @@
   cursor: pointer;
   margin-top: 10px;
 }
+
+.button:disabled {
+  cursor: not-allowed;
+  background-color: #3183ff6e;
+}
+
+.comment {
+  border: 1px solid #ddd;
+  padding: 14px;
+  border-radius: 4px;
+  margin-bottom: 14px;
+}
+
+.comment p {
+  margin-top: 14px;
+  white-space: pre-wrap;
+}
+
+.headComment {
+  display: flex;
+  align-items: center;
+}
+
+.authorLabel {
+  background-color: #CCC;
+  padding: 4px 8px;
+  margin-right: 9px;
+  border-radius: 4px;
+}
+
+.buttonDelete {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
